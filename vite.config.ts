@@ -1,21 +1,21 @@
-import path from 'node:path'
-import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import generateSitemap from 'vite-ssg-sitemap'
-import Layouts from 'vite-plugin-vue-layouts'
-import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import Markdown from 'unplugin-vue-markdown/vite'
-import VueMacros from 'unplugin-vue-macros/vite'
-import VueI18n from '@intlify/unplugin-vue-i18n/vite'
-import { VitePWA } from 'vite-plugin-pwa'
-import VueDevTools from 'vite-plugin-vue-devtools'
-import LinkAttributes from 'markdown-it-link-attributes'
-import Unocss from 'unocss/vite'
-import Shiki from '@shikijs/markdown-it'
-import WebfontDownload from 'vite-plugin-webfont-dl'
-import VueRouter from 'unplugin-vue-router/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
+import path from 'node:path';
+import { defineConfig } from 'vite';
+import Vue from '@vitejs/plugin-vue';
+import generateSitemap from 'vite-ssg-sitemap';
+import Layouts from 'vite-plugin-vue-layouts';
+import Components from 'unplugin-vue-components/vite';
+import AutoImport from 'unplugin-auto-import/vite';
+import Markdown from 'unplugin-vue-markdown/vite';
+import VueMacros from 'unplugin-vue-macros/vite';
+import VueI18n from '@intlify/unplugin-vue-i18n/vite';
+import { VitePWA } from 'vite-plugin-pwa';
+import VueDevTools from 'vite-plugin-vue-devtools';
+import LinkAttributes from 'markdown-it-link-attributes';
+import Unocss from 'unocss/vite';
+import Shiki from '@shikijs/markdown-it';
+import WebfontDownload from 'vite-plugin-webfont-dl';
+import VueRouter from 'unplugin-vue-router/vite';
+import { VueRouterAutoImports } from 'unplugin-vue-router';
 
 export default defineConfig({
   resolve: {
@@ -88,14 +88,14 @@ export default defineConfig({
             target: '_blank',
             rel: 'noopener',
           },
-        })
+        });
         md.use(await Shiki({
           defaultColor: false,
           themes: {
             light: 'vitesse-light',
             dark: 'vitesse-dark',
           },
-        }))
+        }));
       },
     }),
 
@@ -157,7 +157,7 @@ export default defineConfig({
       reduceInlineStyles: false,
     },
     onFinished() {
-      generateSitemap()
+      generateSitemap();
     },
   },
 
@@ -165,4 +165,4 @@ export default defineConfig({
     // TODO: workaround until they support native ESM
     noExternal: ['workbox-window', /vue-i18n/],
   },
-})
+});

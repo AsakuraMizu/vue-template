@@ -21,7 +21,7 @@ useHead({
       href: () => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg',
     },
   ],
-})
+});
 </script>
 
 <template>

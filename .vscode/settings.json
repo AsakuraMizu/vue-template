@@ -1,9 +1,12 @@
 {
-  "cSpell.words": ["Vitesse", "Vite", "unocss", "vitest", "vueuse", "pinia", "demi", "antfu", "iconify", "intlify", "vitejs", "unplugin", "pnpm"],
+  // "cSpell.words": ["Vitesse", "Vite", "unocss", "vitest", "vueuse", "pinia", "demi", "antfu", "iconify", "intlify", "vitejs", "unplugin", "pnpm"],
   "i18n-ally.sourceLanguage": "en",
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.sortKeys": true,
+
+  "vue.complete.casing.tags": "kebab",
+  "typescript.tsdk": "node_modules/typescript/lib",
 
   // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,
@@ -13,23 +16,23 @@
   "editor.formatOnSave": false,
 
   // Auto fix
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
-  },
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": "explicit",
+  //   "source.organizeImports": "never"
+  // },
 
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
-    { "rule": "style/*", "severity": "off" },
-    { "rule": "format/*", "severity": "off" },
-    { "rule": "*-indent", "severity": "off" },
-    { "rule": "*-spacing", "severity": "off" },
-    { "rule": "*-spaces", "severity": "off" },
-    { "rule": "*-order", "severity": "off" },
-    { "rule": "*-dangle", "severity": "off" },
-    { "rule": "*-newline", "severity": "off" },
-    { "rule": "*quotes", "severity": "off" },
-    { "rule": "*semi", "severity": "off" }
+    { "rule": "style/*", "severity": "warn" },
+    { "rule": "format/*", "severity": "warn" },
+    { "rule": "*-indent", "severity": "warn" },
+    { "rule": "*-spacing", "severity": "warn" },
+    { "rule": "*-spaces", "severity": "warn" },
+    { "rule": "*-order", "severity": "warn" },
+    { "rule": "*-dangle", "severity": "warn" },
+    { "rule": "*-newline", "severity": "warn" },
+    { "rule": "*quotes", "severity": "warn" },
+    { "rule": "*semi", "severity": "warn" }
   ],
 
   // The following is optional.
@@ -47,5 +50,37 @@
     "json",
     "jsonc",
     "yaml"
-  ]
+  ],
+  "eslint.format.enable": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
 }
