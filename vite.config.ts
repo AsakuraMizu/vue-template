@@ -11,7 +11,7 @@ import VueI18n from '@intlify/unplugin-vue-i18n/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import VueDevTools from 'vite-plugin-vue-devtools';
 import LinkAttributes from 'markdown-it-link-attributes';
-import Unocss from 'unocss/vite';
+// import Unocss from 'unocss/vite';
 import Shiki from '@shikijs/markdown-it';
 import WebfontDownload from 'vite-plugin-webfont-dl';
 import VueRouter from 'unplugin-vue-router/vite';
@@ -74,7 +74,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unocss
     // see uno.config.ts for config
-    Unocss(),
+    // Unocss(),
 
     // https://github.com/unplugin/unplugin-vue-markdown
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
@@ -133,11 +133,15 @@ export default defineConfig({
       runtimeOnly: true,
       compositionOnly: true,
       fullInstall: true,
-      include: [path.resolve(__dirname, 'locales/**')],
+      include: [path.resolve(__dirname, 'src/locales/**')],
     }),
 
     // https://github.com/feat-agency/vite-plugin-webfont-dl
-    WebfontDownload(),
+    WebfontDownload([
+      'https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap',
+      'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap',
+      'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap',
+    ]),
 
     // https://github.com/webfansplz/vite-plugin-vue-devtools
     VueDevTools(),
